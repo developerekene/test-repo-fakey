@@ -1,16 +1,16 @@
 import * as React from 'react'
 import {View, Text} from 'react-native'
 
-export default function Contacts({navigation}) {
+export default function FavouriteScreen({navigation}) {
      return(
           <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
                <Text 
-               onPress={() => alert('This is the contact page')}
+               onPress={() => navigation.navigate('Home')}
                style={{
                     fontSize: 26, 
-                    fontweight: bold
+                    fontweight: 'bold'
                }}>
-                    Contact Page
+                    Favourite Page
                </Text>
           </View>
      );
