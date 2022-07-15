@@ -8,8 +8,11 @@ import ContactsScreen from './screens/ContactsScreen'
 import FavouriteScreen from './screens/FavouriteScreen'
 import RecentScreen from './screens/RecentScreen'
 
+//Importing Color
+import { COLORS } from '../constants/Colors';
+
 //Screen Names
-const contactName = 'Contact'
+const contactName = 'Contacts'
 const favouriteName = 'Favourite'
 const recentname = 'Recent'
 
@@ -36,7 +39,12 @@ export default function MainContainer(){
 
                          return <Ionicons name={iconName} size={size} color={color}/>
                     }
-               })}>
+               })}
+               tabBarOptions={{
+                    activeTintColor: COLORS.lightRed,
+                    inactiveTintColor: COLORS.lightGrey
+               }}
+               >
                     <Tab.Screen name={recentname} component={RecentScreen}/>
                     <Tab.Screen name={contactName} component={ContactsScreen}/>
                     <Tab.Screen name={favouriteName} component={FavouriteScreen}/>
