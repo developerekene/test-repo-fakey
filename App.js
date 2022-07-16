@@ -16,6 +16,7 @@ export default function App() {
       {/* <PushNotification/> */}
       <MainContainer/>
     </SafeAreaView>
+    <StatusBar style='auto'/>
     </>
   );
 
